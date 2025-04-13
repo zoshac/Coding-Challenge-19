@@ -32,3 +32,5 @@ const TourCard = ({ id, name, info, image, price, onRemove }) => {
 };
 
 export default TourCard;
+
+// used to display individual tour information 
