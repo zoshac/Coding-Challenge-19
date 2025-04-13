@@ -8,3 +8,5 @@ const LoadingSpinner = () => {
   };
   
   export default LoadingSpinner; 
+  // created to show loading animation and message when fetching tour data 
+  

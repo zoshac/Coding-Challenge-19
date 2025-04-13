@@ -2,17 +2,20 @@ import { useState, useEffect } from 'react'
 import Gallery from './components/Gallery'
 import LoadingSpinner from './components/LoadingSpinner'
 import ErrorMessage from './components/ErrorMessage'
-import './styles/style.css'
+import './styles/styles.css'
+// retrieving required dependencies
 
 function App() {
   const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+// management for tours data 
 
   useEffect(() => {
     console.log('App loaded');
     fetchTours();
   }, []);
+// fetch tours data 
 
   const fetchTours = async () => {
     setLoading(true);
@@ -43,6 +46,7 @@ function App() {
   if (error) {
     return <ErrorMessage message={error} onRetry={fetchTours} />;
   }
+// error message if it fails 
 
   if (tours.length === 0) {
     return (
